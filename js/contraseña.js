@@ -1,9 +1,10 @@
-function contraseña() {
-    let password = prompt("Ingrese contraseña:");
-
-    if (password === "Renee") {
-        alert("Contraseña correcta");
+function validarContrasena() {
+    let pass = document.getElementById('passInput').value;
+    let passCorrecta = "Renee";
+    
+    if (pass === passCorrecta) {
+        document.getElementById('resPass').innerText = 'Acceso concedido';
     } else {
-        alert("Contraseña incorrecta");
+        document.getElementById('resPass').innerText = 'Contraseña incorrecta';
     }
 }

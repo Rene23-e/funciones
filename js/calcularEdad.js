@@ -1,8 +1,10 @@
-function calcularEdad(){
-    let anio = Number(document.getElementById("anioNacimiento").value);
-
-    let edad = new Date().getFullYear() - anio;
-
-    document.getElementById("resEdad").innerHTML =
-        "Edad: " + edad + " años";
+function obtenerEdad() {
+    let anioNac = parseInt(document.getElementById('anioNac').value) || 0;
+    let anioActual = new Date().getFullYear();
+    if (anioNac > 0 && anioNac <= anioActual) {
+        let edad = anioActual - anioNac;
+        document.getElementById('resCalcularEdad').innerText = edad + ' años';
+    } else {
+        document.getElementById('resCalcularEdad').innerText = 'Año no válido';
+    }
 }

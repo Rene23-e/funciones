@@ -1,9 +1,8 @@
-function verificarPar() {
-    let numero = 10;
-
-    if (numero % 2 === 0) {
-        alert("El número es par");
+function evaluarPar() {
+    let num = parseInt(document.getElementById('numParInput').value) || 0;
+    if (num % 2 === 0) {
+        document.getElementById('resPar').innerText = 'El número es PAR';
     } else {
-        alert("El número es impar");
+        document.getElementById('resPar').innerText = 'El número es IMPAR';
     }
 }

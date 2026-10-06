@@ -1,162 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Funciones JavaScript</title>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Ejercicios JavaScript</title>
+    <!-- Vinculación del CSS externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="contenedor">
+    <div class="contenedor">
+        <h2>Calculadoras y Utilidades JS</h2>
 
-    <h1>Funciones en JavaScript</h1>
+        <!-- Suma -->
+        <div class="seccion">
+            <h3>Suma</h3>
+            <input type="number" id="num1" placeholder="Número 1">
+            <input type="number" id="num2" placeholder="Número 2">
+            <button onclick="sumar()">Calcular Suma</button>
+            <p class="resultado">Resultado: <span id="resSuma"></span></p>
+        </div>
 
-    <!-- SUMA -->
-    <div class="formulario">
-        <h3>Suma</h3>
-        <input type="number" id="num1" placeholder="Número 1">
-        <input type="number" id="num2" placeholder="Número 2">
-        <button onclick="suma()">Calcular</button>
-        <div id="resSuma" class="resultado"></div>
+        <!-- Resta -->
+        <div class="seccion">
+            <h3>Resta</h3>
+            <input type="number" id="resta1" placeholder="Número 1">
+            <input type="number" id="resta2" placeholder="Número 2">
+            <button onclick="restar()">Calcular Resta</button>
+            <p class="resultado">Resultado: <span id="resResta"></span></p>
+        </div>
+
+        <!-- Multiplicar -->
+        <div class="seccion">
+            <h3>Multiplicación</h3>
+            <input type="number" id="mult1" placeholder="Número 1">
+            <input type="number" id="mult2" placeholder="Número 2">
+            <button onclick="multiplicar()">Multiplicar</button>
+            <p class="resultado">Resultado: <span id="resMult"></span></p>
+        </div>
+
+        <!-- División -->
+        <div class="seccion">
+            <h3>División</h3>
+            <input type="number" id="div1" placeholder="Dividendo">
+            <input type="number" id="div2" placeholder="Divisor">
+            <button onclick="dividir()">Dividir</button>
+            <p class="resultado">Resultado: <span id="resDiv"></span></p>
+        </div>
+
+        <!-- Área Círculo -->
+        <div class="seccion">
+            <h3>Área de Círculo</h3>
+            <input type="number" id="radio" placeholder="Radio">
+            <button onclick="calcularAreaCirculo()">Calcular Área</button>
+            <p class="resultado">Resultado: <span id="resCirculo"></span></p>
+        </div>
+
+        <!-- Área Rectángulo -->
+        <div class="seccion">
+            <h3>Área de Rectángulo</h3>
+            <input type="number" id="base" placeholder="Base">
+            <input type="number" id="altura" placeholder="Altura">
+            <button onclick="calcularAreaRectangulo()">Calcular Área</button>
+            <p class="resultado">Resultado: <span id="resRectangulo"></span></p>
+        </div>
+
+        <!-- Promedio -->
+        <div class="seccion">
+            <h3>Promedio (3 Notas)</h3>
+            <input type="number" id="n1" placeholder="Nota 1">
+            <input type="number" id="n2" placeholder="Nota 2">
+            <input type="number" id="n3" placeholder="Nota 3">
+            <button onclick="calcularPromedio()">Promediar</button>
+            <p class="resultado">Resultado: <span id="resPromedio"></span></p>
+        </div>
+
+        <!-- Número Mayor -->
+        <div class="seccion">
+            <h3>Número Mayor</h3>
+            <input type="number" id="mayor1" placeholder="Número 1">
+            <input type="number" id="mayor2" placeholder="Número 2">
+            <button onclick="evaluarNumMayor()">Evaluar</button>
+            <p class="resultado">Resultado: <span id="resMayor"></span></p>
+        </div>
+
+        <!-- Número Par/Impar -->
+        <div class="seccion">
+            <h3>¿Es Par o Impar?</h3>
+            <input type="number" id="numParInput" placeholder="Ingrese número">
+            <button onclick="evaluarPar()">Verificar</button>
+            <p class="resultado">Resultado: <span id="resPar"></span></p>
+        </div>
+
+        <!-- Edad -->
+        <div class="seccion">
+            <h3>Verificar Edad</h3>
+            <input type="number" id="edadInput" placeholder="Edad">
+            <button onclick="verificarEdad()">Verificar</button>
+            <p class="resultado">Resultado: <span id="resEdad"></span></p>
+        </div>
+
+        <!-- Calcular Edad -->
+        <div class="seccion">
+            <h3>Calcular Edad por Año</h3>
+            <input type="number" id="anioNac" placeholder="Año de Nacimiento">
+            <button onclick="obtenerEdad()">Calcular</button>
+            <p class="resultado">Resultado: <span id="resCalcularEdad"></span></p>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="seccion">
+            <h3>Validar Contraseña</h3>
+            <input type="password" id="passInput" placeholder="Escribe la contraseña">
+            <button onclick="validarContrasena()">Validar</button>
+            <p class="resultado">Resultado: <span id="resPass"></span></p>
+        </div>
+
+        <!-- Saludar Nombre -->
+        <div class="seccion">
+            <h3>Saludar por Nombre</h3>
+            <input type="text" id="nombreInput" placeholder="Tu Nombre">
+            <button onclick="saludar()">Saludar</button>
+            <p class="resultado">Resultado: <span id="resSaludo"></span></p>
+        </div>
+
+        <!-- Mostrar Nombre -->
+        <div class="seccion">
+            <h3>Mostrar Nombre Format</h3>
+            <input type="text" id="nomFormat" placeholder="Nombre completo">
+            <button onclick="mostrarNombre()">Mostrar</button>
+            <p class="resultado">Resultado: <span id="resMostrarNombre"></span></p>
+        </div>
+
+        <!-- Mostrar Hora -->
+        <div class="seccion">
+            <h3>Hora Actual</h3>
+            <button onclick="mostrarHora()">Obtener Hora</button>
+            <p class="resultado">Resultado: <span id="resHora"></span></p>
+        </div>
+
     </div>
 
-    <!-- RESTA -->
-    <div class="formulario">
-        <h3>Resta</h3>
-        <input type="number" id="r1" placeholder="Número 1">
-        <input type="number" id="r2" placeholder="Número 2">
-        <button onclick="resta()">Calcular</button>
-        <div id="resResta" class="resultado"></div>
-    </div>
-
-    <!-- MULTIPLICACIÓN -->
-    <div class="formulario">
-        <h3>Multiplicación</h3>
-        <input type="number" id="m1" placeholder="Número 1">
-        <input type="number" id="m2" placeholder="Número 2">
-        <button onclick="multiplicar()">Calcular</button>
-        <div id="resMultiplicar" class="resultado"></div>
-    </div>
-
-    <!-- DIVISIÓN -->
-    <div class="formulario">
-        <h3>División</h3>
-        <input type="number" id="d1" placeholder="Número 1">
-        <input type="number" id="d2" placeholder="Número 2">
-        <button onclick="division()">Calcular</button>
-        <div id="resDivision" class="resultado"></div>
-    </div>
-
-    <!-- ÁREA CÍRCULO -->
-    <div class="formulario">
-        <h3>Área del Círculo</h3>
-        <input type="number" id="radio" placeholder="Radio">
-        <button onclick="areaCirculo()">Calcular</button>
-        <div id="resCirculo" class="resultado"></div>
-    </div>
-<div class="formulario">
-    <h3>Área del Rectángulo</h3>
-
-    <input type="number" id="base" placeholder="Ingrese la base">
-
-    <input type="number" id="altura" placeholder="Ingrese la altura">
-
-    <button onclick="areaRectangulo()">Calcular</button>
-
-    <div id="resRectangulo" class="resultado"></div>
-</div>
-    <!-- EDAD -->
-    <div class="formulario">
-        <h3>Calcular Edad</h3>
-        <input type="number" id="anioNacimiento" placeholder="Año de nacimiento">
-        <button onclick="calcularEdad()">Calcular</button>
-        <div id="resEdad" class="resultado"></div>
-    </div>
-
-<div class="formulario">
-    <h3>Mayor o Menor de Edad</h3>
-
-    <input type="number" id="edadPersona" placeholder="Ingrese su edad">
-
-    <button onclick="edad()">Verificar</button>
-
-    <div id="resEdad" class="resultado"></div>
-</div>
-
-
-    <div class="formulario">
-
-    <h3>Saludar</h3>
-
-    <input type="text" id="nombreSaludo" placeholder="Ingrese su nombre">
-
-    <button onclick="saludarNombre()">Saludar</button>
-
-    <div id="resSaludo" class="resultado"></div>
-</div>
-
-
-<div class="formulario">
-    <h3>Promedio</h3>
-
-    <input type="number" id="nota1" placeholder="Nota 1">
-    <input type="number" id="nota2" placeholder="Nota 2">
-    <input type="number" id="nota3" placeholder="Nota 3">
-
-    <button onclick="promedio()">Calcular</button>
-
-    <div id="resPromedio" class="resultado"></div>
-</div>
-<div class="formulario">
-    <h3>Número Par</h3>
-
-    <input type="number" id="numeroPar" placeholder="Ingrese un número">
-
-    <button onclick="numPar()">Verificar</button>
-
-    <div id="resPar" class="resultado"></div>
-</div>
-<div class="formulario">
-    <h3>Número Mayor</h3>
-
-    <input type="number" id="numero1" placeholder="Primer número">
-    <input type="number" id="numero2" placeholder="Segundo número">
-
-    <button onclick="numMayor()">Comparar</button>
-
-    <div id="resMayor" class="resultado"></div>
-</div>
-<div class="formulario">
-    <h3>Contraseña</h3>
-
-    <input type="password" id="clave" placeholder="Ingrese la contraseña">
-
-    <button onclick="contraseña()">Verificar</button>
-
-    <div id="resClave" class="resultado"></div>
-</div>
-
-
-
-<div class="formulario">
-    <h3>Mostrar Hora</h3>
-
-    <button onclick="mostrarHora()">Mostrar Hora Actual</button>
-
-    <div id="resHora" class="resultado"></div>
-</div>
-
-
-<div class="formulario">
-    <h3>Mostrar Nombre</h3>
-    <input type="text" id="nombre" placeholder="Ingrese su nombre">
-    <button onclick="mostrarNombre()">Mostrar</button>
-    <div id="resNombre" class="resultado"></div>
-</div>
-
-</div>
+    <!-- Carga de todos los scripts JS desde la carpeta js/ -->
+    <script src="js/areaCirculo.js"></script>
+    <script src="js/areaRectangulo.js"></script>
+    <script src="js/calcularEdad.js"></script>
+    <script src="js/contraseña.js"></script>
+    <script src="js/division.js"></script>
+    <script src="js/edad.js"></script>
+    <script src="js/mostrarHora.js"></script>
+    <script src="js/mostrarNombre.js"></script>
+    <script src="js/multiplicar.js"></script>
+    <script src="js/numMayor.js"></script>
+    <script src="js/numPar.js"></script>
+    <script src="js/promedio.js"></script>
+    <script src="js/resta.js"></script>
+    <script src="js/saludarNombre.js"></script>
+    <script src="js/suma.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,5 @@
 function mostrarHora() {
-    let hora = new Date();
-    alert("Hora: " + hora.toLocaleTimeString());
+    let ahora = new Date();
+    let horaFormateada = ahora.toLocaleTimeString();
+    document.getElementById('resHora').innerText = horaFormateada;
 }

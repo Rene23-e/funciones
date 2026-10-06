@@ -1,7 +1,6 @@
-function resta(){
-    let n1 = Number(document.getElementById("r1").value);
-    let n2 = Number(document.getElementById("r2").value);
-
-    document.getElementById("resResta").innerHTML =
-        "Resultado: " + (n1 - n2);
+function restar() {
+    let n1 = parseFloat(document.getElementById('resta1').value) || 0;
+    let n2 = parseFloat(document.getElementById('resta2').value) || 0;
+    let total = n1 - n2;
+    document.getElementById('resResta').innerText = total;
 }

@@ -1,9 +1,6 @@
-function areaRectangulo() {
-let base = Number(document.getElementById("base").value);
-let altura = Number(document.getElementById("altura").value);
- 
-let area = base * altura;
- 
-document.getElementById("resRectangulo").innerHTML =
-"El área del rectángulo es: " + area;
+function calcularAreaRectangulo() {
+    let base = parseFloat(document.getElementById('base').value) || 0;
+    let altura = parseFloat(document.getElementById('altura').value) || 0;
+    let area = base * altura;
+    document.getElementById('resRectangulo').innerText = area;
 }

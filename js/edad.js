@@ -1,18 +1,8 @@
-function edad() {
-            let inputEdad = document.getElementById("campoEdad").value;
-
-
-            let edad = parseInt(inputEdad, 10);
-
-
-            if (isNaN(edad)) {
-                alert("Por favor, ingresa un número válido.");
-                return;
-            }
-
-            if (edad >= 18) {
-                alert("Es mayor de edad");
-            } else {
-                alert("Es menor de edad");
-            }
-        }
+function verificarEdad() {
+    let edad = parseInt(document.getElementById('edadInput').value) || 0;
+    if (edad >= 18) {
+        document.getElementById('resEdad').innerText = 'Eres mayor de edad';
+    } else {
+        document.getElementById('resEdad').innerText = 'Eres menor de edad';
+    }
+}
